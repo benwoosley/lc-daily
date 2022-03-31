@@ -5,7 +5,6 @@
 class Solution
 {
 public:
-    //FIXME: works, but could be done with a binary search
     bool searchMatrix(std::vector<std::vector<int> >& matrix, int target)
     {
         int n = matrix[0].size();
@@ -44,6 +43,7 @@ public:
         return false;
     }
 
+    //FIXME: finish
     bool binarySearchMatrix(std::vector<std::vector<int> >& matrix, int target)
     {
         int n = matrix[0].size();
