@@ -42,28 +42,6 @@ public:
         }
         return false;
     }
-
-    //FIXME: finish
-    bool binarySearchMatrix(std::vector<std::vector<int> >& matrix, int target)
-    {
-        int n = matrix[0].size();
-        int m = matrix.size();
-
-        if (target < matrix[0][0] || target > matrix[m - 1][n - 1])
-        {
-            return false;
-        }
-        if (target == matrix[0][0] || target == matrix[m - 1][n - 1])
-        {
-            return true;
-        }
-        int col = floor(m / 2);
-
-        std::cout << col << std::endl;
-
-        return false;
-    }
-
 };
 
 std::vector<std::vector<int> > create_vector()

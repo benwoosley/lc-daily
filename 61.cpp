@@ -8,27 +8,54 @@ struct ListNode
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
-
-void push_front(ListNode* head)
+void print_list(ListNode* head)
 {
-    return;
+    while (head != nullptr)
+    {
+        std::cout << head->val << " --> ";
+        head = head->next;
+    }
+    std::cout << std::endl;
 }
-
+ListNode* push_front(ListNode* head, ListNode* new_node)
+{
+    new_node->next = head;
+    return new_node;
+}
 ListNode* pop_back(ListNode* head)
 {
     ListNode* node_popped = nullptr;
-    return node_popped;
+    while (head->next->next != nullptr)
+    {
+        head = head->next;
+    }
+    ListNode* temp = head->next;
+    head->next = nullptr;
+    return temp;
 }
-
+int get_length(ListNode* head)
+{
+    int count = 0;
+    while (head != nullptr)
+    {
+        count++;
+        head = head->next;
+    }
+    return count;
+}
 class Solution
 {
 public:
-    //FIXME: 1
+    //FIXME: TLE
     ListNode* rotateRight(ListNode* head, int k)
     {
+        if (!head || get_length(head) <= 1)
+        {
+            return head;
+        }
         for (int i = 0; i < k; i++)
         {
-            push_front(pop_back(head));
+            head = push_front(head, pop_back(head));
         }
         return head;
     }
@@ -39,8 +66,6 @@ std::vector<int> create_vector()
     return_value.push_back(1);
     return_value.push_back(2);
     return_value.push_back(3);
-    return_value.push_back(4);
-    return_value.push_back(5);
     return return_value;
 }
 void push_back(ListNode* head, int val)
@@ -58,20 +83,12 @@ ListNode* create_list(std::vector<int> vec)
         push_back(head, vec[i]);
     return head;
 }
-void print_list(ListNode* head)
-{
-    while (head != nullptr)
-    {
-        std::cout << head->val << "-->";
-        head = head->next;
-    }
-    std::cout << std::endl;
-}
 int main(int argc, char *argv[])
 {
     Solution s;
     ListNode* head = create_list(create_vector());
     print_list(head);
-    s.rotateRight(head, 2);
+    head = s.rotateRight(head, 2000000000);
+    print_list(head);
     return 0;
 }
