@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-
 class Solution
 {
 public:
@@ -24,7 +23,6 @@ std::vector<int> create_vector()
 int main(int argc, char *argv[])
 {
     std::vector<int> nums = create_vector();
-
     Solution s;
     s.nextPermutation(nums);
     std::cout << "Hello World!" << std::endl;

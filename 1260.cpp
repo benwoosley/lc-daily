@@ -5,6 +5,7 @@ class Solution
 public:
     std::vector<std::vector<int> > shiftGrid(std::vector<std::vector<int> >& grid, int k)
     {
+        // O(ijk)
         if (k == 0)
             return grid;
         int m = grid.size();
