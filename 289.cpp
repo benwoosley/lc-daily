@@ -1,7 +1,6 @@
 #include <iostream>
 #include <pthread.h>
 #include <vector>
-
 void print_board(std::vector<std::vector<int> > board)
 {
     for (int i = 0; i < board.size(); i++)
@@ -14,7 +13,6 @@ void print_board(std::vector<std::vector<int> > board)
     }
     std::cout << std::endl;
 }
-
 void need_to_swap(int num_neighbors, bool is_live, std::vector<std::string> &swap_list, int i, int j)
 {
     if (is_live)
@@ -40,8 +38,8 @@ void need_to_swap(int num_neighbors, bool is_live, std::vector<std::string> &swa
         }
     }
 }
-
 // FIXME: treat out of bounds cells as 0
+// TODO: complete this
 class Solution
 {
 public:
