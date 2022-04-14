@@ -37,7 +37,6 @@ public:
         return 0;
     }
 };
-
 std::vector<int> create_vector()
 {
     std::vector<int> vec;
@@ -60,7 +59,6 @@ std::vector<int> create_vector()
     vec.push_back(8);
     vec.push_back(9);
     return vec;
-
 }
 int main(int argc, char *argv[])
 {
