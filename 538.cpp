@@ -97,7 +97,7 @@ void print_vector(std::vector<TreeNode*> vec)
 class Solution
 {
 public:
-    //FIXME: iterate through every node in the tree (BFS or DFS) and subtract every value in that nodes left subree from the sum and update curr->val
+    // iterate through every node in the tree (BFS or DFS) and subtract every value in that nodes left subree from the sum and update curr->val
     TreeNode* convertBST(TreeNode* root)
     {
         if (!root)
