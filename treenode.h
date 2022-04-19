@@ -17,19 +17,26 @@ void tree_insert(TreeNode* root, T val)
     if (val < root->val)
     {
         if (root->left)
+        {
             tree_insert(root->left, val);
+        }
         else
+        {
             root->left = new TreeNode(val);
+        }
     }
     if (val > root->val)
     {
         if (root->right)
+        {
             tree_insert(root->right, val);
+        }
         else
+        {
             root->right = new TreeNode(val);
+        }
     }
 }
-
 
 template <typename T>
 TreeNode* create_tree(std::vector<T> vec)
@@ -49,15 +56,18 @@ std::vector<TreeNode*> inorder(TreeNode* root)
     {
         std::vector<TreeNode*> left_vec = inorder(root->left);
         for (int i = 0; i < left_vec.size(); i++)
+        {
             values.push_back(left_vec[i]);
-
+        }
     }
     values.push_back(root);
     if (root->right)
     {
         std::vector<TreeNode*> right_vec = inorder(root->right);
         for (int i = 0; i < right_vec.size(); i++)
+        {
             values.push_back(right_vec[i]);
+        }
     }
     return values;
 }
