@@ -107,5 +107,6 @@ int main(int argc, char *argv[])
     print_vector(in_order_traversal(root));
     Solution s;
     std::cout << s.kthSmallest(root, 1) << std::endl;
+    std::vector<int> vec;
     return 0;
 }
