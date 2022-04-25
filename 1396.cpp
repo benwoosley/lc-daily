@@ -43,7 +43,6 @@ public:
         std::string routeName = startStation + "_" + endStation;
         auto& route = routeMap[routeName];
         return route.first / route.second;
-        return -1.0;
     }
 };
 
