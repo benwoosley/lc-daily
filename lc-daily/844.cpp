@@ -1,9 +1,6 @@
-#include <string>
 #include <iostream>
-#include <vector>
 #include <stack>
 
-// STACK
 std::stack<char> parse_string(std::string s)
 {
     std::stack<char> stack;
@@ -35,5 +32,4 @@ int main(int argc, char *argv[])
     std::cin >> t;
     Solution sol;
     std::cout << sol.backspaceCompare(s, t) << std::endl;
-    return 0;
 }

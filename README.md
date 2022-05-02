@@ -1,2 +1,2 @@
-# leetcode
-leetcode daily problem solutions
+# Data Structures and Algorithms
+Contains leetcode daily solutions and kattis problems.
