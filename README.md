@@ -1,1 +1,3 @@
-Contains leetcode daily solutions and kattis problems.
+# lc-daily
+
+solutions to daily leetcode problems
